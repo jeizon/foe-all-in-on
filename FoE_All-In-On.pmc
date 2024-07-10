@@ -56,3 +56,54 @@ Groups=Start:1
 52|Left Click, Continue, CancelarX, CancelarY, 1|0, 0, 1366, 768, %A_WorkingDir%\CB\Cancelar.png|1|50|ImageSearch||Screen|||117|
 53|[End If]|EndIf|1|0|If_Statement|||||123|
 
+[PMC Code v5.4.1]|F6||0|Window,2,Fast,0,1,Input,-1,-1,1|1|JxJ_1
+Context=None|
+Groups=Start:1
+1|[Assign Variable]|RepetirJJ := 2|1|0|Variable|Expression||||1|
+2|[Assign Variable]|AguardarJJ := 250|1|0|Variable|Expression||||2|
+3|[Assign Variable]|IntervaloJJ := 250|1|0|Variable|Expression||||3|
+4|Left Click, Continue, AtacarX, AtacarY, 1|738, 460, 825, 530, %A_WorkingDir%\JxJ\Atacar.png|%RepetirJJ%|%IntervaloJJ%|ImageSearch||Screen|||4|
+5|Continue, Continue, TropaJX, TropaJY|590, 384, 614, 410, 0x422714, 0, Fast RGB|%RepetirJJ%|%IntervaloJJ%|PixelSearch||Screen|||13|
+6|If Image/Pixel Found||1|0|If_Statement|||||19|
+7|R|{R}|1|0|Send|||||21|
+8|Move|{Click, 402, 254, 0}|1|53|SendEvent|||||22|
+9|[End If]|EndIf|1|0|If_Statement|||||24|
+10|Continue, Continue, BatAutoJX, BatAutoJY, 1|0, 0, 1365, 767, %A_WorkingDir%\JxJ\BatAutoJ.png|%RepetirJJ%|%IntervaloJJ%|ImageSearch||Screen|||25|
+11|If Image/Pixel Found||1|0|If_Statement|||||32|
+12|b|{b}|1|0|Send|||||34|
+13|Move|{Click, 402, 254, 0}|1|53|SendEvent|||||35|
+14|[End If]|EndIf|1|0|If_Statement|||||37|
+15|Continue, Continue, OkJX, OkJY, 1|0, 0, 1365, 767, %A_WorkingDir%\JxJ\OkJ.png|%RepetirJJ%|%IntervaloJJ%|ImageSearch||Screen|||38|
+16|If Image/Pixel Found||1|0|If_Statement|||||45|
+17|Escape|{Escape}|1|0|Send|||||47|
+18|Move|{Click, 402, 254, 0}|1|53|SendEvent|||||48|
+19|[End If]|EndIf|1|0|If_Statement|||||50|
+20|Continue, Continue, Ok2X, Ok2Y, 1|0, 0, 1366, 768, %A_WorkingDir%\JxJ\Ok2J.png|%RepetirJJ%|%IntervaloJJ%|ImageSearch||Screen|||51|
+21|If Image/Pixel Found||1|0|If_Statement|||||58|
+22|Escape|{Escape}|1|0|Send|||||60|
+23|[End If]|EndIf|1|0|If_Statement|||||61|
+
+[PMC Code v5.4.1]|F7||0|Window,2,Fast,0,1,Input,-1,-1,1|1|JxJ_3
+Context=None|
+Groups=Start:1
+1|Left Click, Continue, Ataca3rX, Atacar3Y, 1|733, 575, 830, 654, %A_WorkingDir%\JxJ\Atacar3.png|3|500|ImageSearch||Screen|||1|
+2|Move|{Click, 962, 336, 0}|1|53|SendEvent|||||10|
+3|Continue, Continue, TropaJX, TropaJY|590, 384, 614, 410, 0x422714, 0, Fast RGB|3|500|PixelSearch||Screen|||12|
+4|If Image/Pixel Found||1|0|If_Statement|||||18|
+5|R|{R}|1|0|Send|||||20|
+6|[End If]|EndIf|1|0|If_Statement|||||21|
+7|Continue, Continue, BatAutoJX, BatAutoJY, 1|0, 0, 1365, 767, %A_WorkingDir%\JxJ\BatAutoJ.png|3|500|ImageSearch||Screen|||22|
+8|If Image/Pixel Found||1|0|If_Statement|||||29|
+9|b|{b}|1|0|Send|||||31|
+10|[End If]|EndIf|1|0|If_Statement|||||32|
+11|Move|{Click, 962, 336, 0}|1|53|SendEvent|||||33|
+12|Continue, Continue, OkJX, OkJY, 1|0, 0, 1365, 767, %A_WorkingDir%\JxJ\OkJ.png|3|500|ImageSearch||Screen|||35|
+13|If Image/Pixel Found||1|0|If_Statement|||||42|
+14|Escape|{Escape}|1|0|Send|||||44|
+15|[End If]|EndIf|1|0|If_Statement|||||45|
+16|Move|{Click, 962, 336, 0}|1|53|SendEvent|||||46|
+17|Continue, Continue, FoundX, FoundY, 0|0, 0, 1366, 768, %A_WorkingDir%\JxJ\Ok2J.png|3|500|ImageSearch||Screen|||48|
+18|If Image/Pixel Found||1|0|If_Statement|||||54|
+19|Escape|{Escape}|1|0|Send|||||56|
+20|[End If]|EndIf|1|0|If_Statement|||||57|
+
