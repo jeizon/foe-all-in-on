@@ -56,6 +56,116 @@ Groups=Start:1
 52|Left Click, Continue, CancelarX, CancelarY, 1|0, 0, 1366, 768, %A_WorkingDir%\CB\Cancelar.png|1|50|ImageSearch||Screen|||117|
 53|[End If]|EndIf|1|0|If_Statement|||||123|
 
+[PMC Code v5.4.1]|F4||0|Window,2,Fast,0,1,Input,-1,-1,1|1|Taberna
+Context=None|
+Groups=Start:1
+1|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||1|
+2|Left Click, Continue, Tab1X, Tab1Y, 1|275, 678, 305, 714, %A_WorkingDir%\Taberna\Sentar.png|4|350|ImageSearch||Window|||2|
+3|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||11|
+4|Left Click, Continue, Tab2X, Tab2Y, 1|306, 622, 395, 728, %A_WorkingDir%\Taberna\Sentar.png|4|350|ImageSearch||Window|||12|
+5|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||21|
+6|Left Click, Continue, Tab3X, Tab3Y, 1|401, 623, 489, 728, %A_WorkingDir%\Taberna\Sentar.png|4|350|ImageSearch||Window|||22|
+7|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||31|
+8|Left Click, Continue, Tab4X, Tab4Y, 1|487, 621, 578, 726, %A_WorkingDir%\Taberna\Sentar.png|4|350|ImageSearch||Window|||32|
+9|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||41|
+10|Left Click, Continue, Tab5X, Tab5Y, 1|580, 620, 673, 727, %A_WorkingDir%\Taberna\Sentar.png|4|350|ImageSearch||Window|||42|
+11|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||51|
+12|Continue, Continue, ProxX, ProxY, 1|731, 619, 795, 700, *10 %A_WorkingDir%\Taberna\Prox_Tab.png|1|50|ImageSearch|UntilFound|Window|||52|
+13|If Image/Pixel Found||1|0|If_Statement|||||60|
+14|Left Move & Click|%ProxX%, %ProxY% Left, 1|1|10|Click|||||62|
+15|[End If]|EndIf|1|0|If_Statement|||||64|
+16|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||65|
+
+[PMC Code v5.4.1]|F5||0|Window,2,Fast,0,1,Input,-1,-1,1|1|Motivar35
+Context=None|
+Groups=Start:1
+1|[Assign Variable]|NumDeAux := 0|1|0|Variable|Expression||||1|
+2|[Assign Variable]|NumVar := 20|1|0|Variable|Expression||Quantidade de Motivações Ajuste para a quantidade necessária nas suas missões recorrentes||2|
+3|[Assign Variable]|Repetir := 4|1|0|Variable|Expression||||3|
+4|[Label]|home|1|0|Label|||||4|
+5|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||5|
+6|[Label]|Primeiro|1|0|Label|||||6|
+7|Continue, Continue, Aux1X, Aux1Y|221, 705, 301, 726, 0x934F1F, 10, Fast RGB|%Repetir%|500|PixelSearch||Window|||7|
+8|If Image/Pixel Found||1|0|If_Statement|||||13|
+9|[Add Variable]|Aux1X += 20|1|0|Variable|Expression||||15|
+10|Left Move & Click|%Aux1X%, %Aux1Y% Left, 1|1|50|Click|||||16|
+11|[Pause]||1|500|Sleep|||||18|
+12|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||19|
+13|[Add Variable]|NumDeAux += 1|1|0|Variable|||||20|
+14|Evaluate Expression|%NumDeAuX% = %NumVar%|1|0|If_Statement|||||21|
+15|[MsgBox]|NumDeAux = %NumDeAux%|1|0|MsgBox|64||||23|
+16|Break||1|0|Break|||||24|
+17|[End If]|EndIf|1|0|If_Statement|||||25|
+18|[End If]|EndIf|1|0|If_Statement|||||26|
+19|[Label]|Segundo|1|0|Label|||||27|
+20|Continue, Continue, Aux2X, Aux2Y|314, 710, 387, 724, 0x934F1F, 10, Fast RGB|%Repetir%|500|PixelSearch||Window|||28|
+21|If Image/Pixel Found||1|0|If_Statement|||||34|
+22|[Add Variable]|Aux2X += 20|1|0|Variable|Expression||||36|
+23|Left Move & Click|%Aux2X%, %Aux2Y% Left, 1|1|50|Click|||||37|
+24|[Pause]||1|500|Sleep|||||39|
+25|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||40|
+26|[Add Variable]|NumDeAux += 1|1|0|Variable|||||41|
+27|Evaluate Expression|%NumDeAuX% = %NumVar%|1|0|If_Statement|||||42|
+28|[MsgBox]|NumDeAux = %NumDeAux%|1|0|MsgBox|64||||44|
+29|Break||1|0|Break|||||45|
+30|[End If]|EndIf|1|0|If_Statement|||||46|
+31|[End If]|EndIf|1|0|If_Statement|||||47|
+32|[Label]|Terceiro|1|0|Label|||||48|
+33|Continue, Continue, Aux3X, Aux3Y|407, 709, 474, 722, 0x934F1F, 10, Fast RGB|%Repetir%|500|PixelSearch||Window|||49|
+34|If Image/Pixel Found||1|0|If_Statement|||||55|
+35|[Add Variable]|Aux3X += 20|1|0|Variable|Expression||||57|
+36|Left Move & Click|%Aux3X%, %Aux3Y% Left, 1|1|50|Click|||||58|
+37|[Pause]||1|500|Sleep|||||60|
+38|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||61|
+39|[Add Variable]|NumDeAux += 1|1|0|Variable|||||62|
+40|Evaluate Expression|%NumDeAuX% = %NumVar%|1|0|If_Statement|||||63|
+41|[MsgBox]|NumDeAux = %NumDeAux%|1|0|MsgBox|64||||65|
+42|Break||1|0|Break|||||66|
+43|[End If]|EndIf|1|0|If_Statement|||||67|
+44|[End If]|EndIf|1|0|If_Statement|||||68|
+45|[Label]|Quarto|1|0|Label|||||69|
+46|Continue, Continue, Aux4X, Aux4Y|498, 709, 568, 724, 0x934F1F, 10, Fast RGB|%Repetir%|500|PixelSearch||Window|||70|
+47|If Image/Pixel Found||1|0|If_Statement|||||76|
+48|[Add Variable]|Aux4X += 20|1|0|Variable|Expression||||78|
+49|Left Move & Click|%Aux4X%, %Aux4Y% Left, 1|1|10|Click|||||79|
+50|[Pause]||1|500|Sleep|||||81|
+51|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||82|
+52|[Add Variable]|NumDeAux += 1|1|0|Variable|||||83|
+53|Evaluate Expression|%NumDeAuX% = %NumVar%|1|0|If_Statement|||||84|
+54|[MsgBox]|NumDeAux = %NumDeAux%|1|0|MsgBox|64||||86|
+55|Break||1|0|Break|||||87|
+56|[End If]|EndIf|1|0|If_Statement|||||88|
+57|[End If]|EndIf|1|0|If_Statement|||||89|
+58|[Label]|Quinto|1|0|Label|||||90|
+59|Continue, Continue, Aux5X, Aux5Y|593, 711, 658, 723, 0x934F1F, 10, Fast RGB|%Repetir%|500|PixelSearch||Window|||91|
+60|If Image/Pixel Found||1|0|If_Statement|||||97|
+61|[Add Variable]|Aux5X += 20|1|0|Variable|Expression||||99|
+62|Left Move & Click|%Aux5X%, %Aux5Y% Left, 1|1|10|Click|||||100|
+63|[Pause]||1|500|Sleep|||||102|
+64|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||103|
+65|[Add Variable]|NumDeAux += 1|1|0|Variable|||||104|
+66|Evaluate Expression|%NumDeAuX% = %NumVar%|1|0|If_Statement|||||105|
+67|[MsgBox]|NumDeAux = %NumDeAux%|1|0|MsgBox|64||||107|
+68|Break||1|0|Break|||||108|
+69|[End If]|EndIf|1|0|If_Statement|||||109|
+70|[End If]|EndIf|1|0|If_Statement|||||110|
+71|[Label]|Proximo|1|0|Label|||||111|
+72|[Pause]||1|500|Sleep|||||112|
+73|Continue, Continue, ProxX, ProxY|761, 666, 783, 684, 0xB3BACA, 10, Fast RGB|2|1300|PixelSearch|UntilFound|Window|||113|
+74|If Image/Pixel Found||1|0|If_Statement|||||120|
+75|[Add Variable]|ProxX += 5|1|0|Variable|Expression||||122|
+76|[Pause]||1|500|Sleep|||||123|
+77|Left Move & Click|%ProxX%, %ProxY% Left, 1|1|10|Click|||||124|
+78|[End If]|EndIf|1|0|If_Statement|||||126|
+79|Move|{Click, 765, 622, 0}|1|0|SendEvent|||||127|
+80|Evaluate Expression|%NumDeAuX% < %NumVar%|1|0|If_Statement|||||128|
+81|[Goto]|home|1|0|Goto|||||130|
+82|[End If]|EndIf|1|0|If_Statement|||||131|
+83|Evaluate Expression|%NumDeAuX% = %NumVar%|1|0|If_Statement|||||132|
+84|[MsgBox]|NumDeAux = %NumDeAux%|1|0|MsgBox|64||||134|
+85|Break||1|0|Break|||||135|
+86|[End If]|EndIf|1|0|If_Statement|||||136|
+
 [PMC Code v5.4.1]|F6||0|Window,2,Fast,0,1,Input,-1,-1,1|1|JxJ_1
 Context=None|
 Groups=Start:1
