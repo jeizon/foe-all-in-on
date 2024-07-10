@@ -1,0 +1,58 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|F3||0|Window,2,Fast,0,1,Input,-1,-1,1|1|CbG
+Context=None|
+Groups=Start:1
+1|[Assign Variable]|Repetir := 3|1|0|Variable|Expression||||1|
+2|[Assign Variable]|Intervalo := 300|1|0|Variable|Expression||||2|
+3|[Assign Variable]|Aguardar := 500|1|0|Variable|Expression||||3|
+4|Continue, Continue, AtkX, AtkY, 1|555, 289, 825, 550, %A_WorkingDir%\CB\Ataque.png|%Repetir%|%Intervalo%|ImageSearch||Screen|||4|
+5|If Image/Pixel Found||1|0|If_Statement|||||11|
+6|[Assign Variable]|AtkX := AtkX-13|1|0|Variable|Expression||||13|
+7|[Assign Variable]|AtkY := AtkY+15|1|0|Variable|Expression||||14|
+8|Left Move & Click|%AtkX%, %AtkY% Left, 1|1|%Intervalo%|Click|||||15|
+9|[Pause]||1|%Aguardar%|Sleep|||||17|
+10|Move|{Click, %AtkX%, %AtkY%, 0}|1|%Intervalo%|SendEvent|||||18|
+11|[End If]|EndIf|1|0|If_Statement|||||20|
+12|Continue, Continue, TropaX, TropaY|602, 396, 624, 415, 0x442816, 0, Fast RGB|%Repetir%|%Intervalo%|PixelSearch||Screen|||21|
+13|If Image/Pixel Found||1|0|If_Statement|||||27|
+14|r|{r}|1|0|Send|||||29|
+15|[Pause]||1|%Aguardar%|Sleep|||||30|
+16|Move|{Click, 591, 318, 0}|1|%Intervalo%|SendEvent|||||31|
+17|[End If]|EndIf|1|0|If_Statement|||||33|
+18|Continue, Continue, Auto1X, Auto1Y, 1|-61, 31, 1304, 798, %A_WorkingDir%\CB\Auto1.png|%Repetir%|%Intervalo%|ImageSearch||Screen|||34|
+19|If Image/Pixel Found||1|0|If_Statement|||||41|
+20|B|{B}|1|0|Send|||||43|
+21|[Pause]||1|%Aguardar%|Sleep|||||44|
+22|Move|{Click, 591, 318, 0}|1|%Intervalo%|SendEvent|||||45|
+23|[End If]|EndIf|1|0|If_Statement|||||47|
+24|Continue, Continue, Auto2X, Auto2Y, 1|8, 8, 1373, 775, %A_WorkingDir%\CB\Auto2.png|%Repetir%|%Intervalo%|ImageSearch||Screen|||48|
+25|If Image/Pixel Found||1|0|If_Statement|||||55|
+26|B|{B}|1|0|Send|||||57|
+27|[Pause]||1|%Aguardar%|Sleep|||||58|
+28|Move|{Click, 591, 318, 0}|1|%Intervalo%|SendEvent|||||59|
+29|[End If]|EndIf|1|0|If_Statement|||||61|
+30|Continue, Continue, Ok1X, Ok1Y, 1|8, 8, 1373, 770, %A_WorkingDir%\CB\Ok1.png|%Repetir%|%Intervalo%|ImageSearch||Screen|||62|
+31|If Image/Pixel Found||1|0|If_Statement|||||69|
+32|Escape|{Escape}|1|0|Send|||||71|
+33|[Pause]||1|%Aguardar%|Sleep|||||72|
+34|Move|{Click, 591, 318, 0}|1|%Intervalo%|SendEvent|||||73|
+35|[End If]|EndIf|1|0|If_Statement|||||75|
+36|Continue, Continue, Ok2X, Ok2Y, 1|-61, 31, 1304, 798, %A_WorkingDir%\CB\Ok2.png|%Repetir%|%Intervalo%|ImageSearch||Screen|||76|
+37|If Image/Pixel Found||1|0|If_Statement|||||83|
+38|Escape|{Escape}|1|0|Send|||||85|
+39|[Pause]||1|%Aguardar%|Sleep|||||86|
+40|Move|{Click, 591, 318, 0}|1|%Intervalo%|SendEvent|||||87|
+41|[End If]|EndIf|1|0|If_Statement|||||89|
+42|Continue, Continue, DimasX, DimasY, 0|0, 0, 1366, 768, %A_WorkingDir%\CB\Dimas.png|1|0|ImageSearch||Screen|||90|
+43|If Image/Pixel Found||1|0|If_Statement|||||92|
+44|Escape|{Escape}|1|0|Send|||||94|
+45|[End If]|EndIf|1|0|If_Statement|||||95|
+46|Continue, Continue, Ok3X, Ok3Y, 1|0, 0, 1365, 767, *10 %A_WorkingDir%\CB\Ok3.png|%Repetir%|%Intervalo%|ImageSearch||Screen|||96|
+47|If Image/Pixel Found||1|0|If_Statement|||||103|
+48|Left Move & Click|672, 511 Left, 1|1|500|Click|||||105|
+49|[End If]|EndIf|1|0|If_Statement|||||107|
+50|Continue, Continue, RenderX, RenderY, 1|0, 0, 1366, 768, %A_WorkingDir%\CB\Render.png|%Repetir%|%Intervalo%|ImageSearch||Screen|||108|
+51|If Image/Pixel Found||1|0|If_Statement|||||115|
+52|Left Click, Continue, CancelarX, CancelarY, 1|0, 0, 1366, 768, %A_WorkingDir%\CB\Cancelar.png|1|50|ImageSearch||Screen|||117|
+53|[End If]|EndIf|1|0|If_Statement|||||123|
+

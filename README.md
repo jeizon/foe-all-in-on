@@ -1,2 +1,2 @@
-# foe-all-in-on
-Automatização Forge Of Empires
+Automatição FoE
+* Batalha Automatica na CbG
