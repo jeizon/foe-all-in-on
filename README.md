@@ -8,3 +8,11 @@ Automatição FoE
 - Comecei a ajustar o script pra funcionar no Chrome, com zoom em 100% (Antes estava em 80%), e usando o FoE como aplicativo do Google. 
 - Atualizações das imagens utilizadas.
 - Atualizações de variáveis, agora são consideradas números inteiros no lugar de matriz.
+
+23/09/2024
+- Criado variáveis para a maioria das funcões
+
+* Como utilizar:
+ - Abra o app do windows "Ferramentas de Captura" e tire um print igual ao que esta nas pastas e substitui a imagem em questão pela sua. Isso porque a imagem difere de acordo com sua resolução, navegador e fonte do computador.
+ - Depois que substituir todas as imagens, abra o Pulover Macro Creator, abra o script "FoE-All-In-On.pmc" e ajustes as váriaveis de acordo com seu PC:
+ 	-- Troque as váriaveis "FimX" e %FimY% pela resolução do seu computador. o meu notebook é 1366x768, então o FimX=1366 e FimY=768.
