@@ -221,3 +221,51 @@ Groups=Start:1
 19|Escape|{Escape}|1|0|Send|||||56|
 20|[End If]|EndIf|1|0|If_Statement|||||57|
 
+[PMC Code v5.4.1]|||0|Client,2,Fast,0,1,Input,-1,-1,1|1|Expedicao
+Context=None|
+Groups=Start:1
+1|[Assign Variable]|ERepetir := 1|1|0|Variable|||||1|
+2|Random|EIntervalo, 313, 513|1|0|Random|||||2|
+3|[Assign Variable]|InicioX := 0|1|0|Variable|||||3|
+4|[Assign Variable]|InicioY := 0|1|0|Variable|||||4|
+5|[Assign Variable]|FimX := 1366|1|0|Variable|||||5|
+6|[Assign Variable]|FimY := 768|1|0|Variable|||||6|
+7|Random|Aguardar, 513, 813|1|0|Random|||||7|
+8|Continue, Continue, ESetaX, ESetaY, 1|%InicioX%, %InicioY%, %FimX%, %FimY%, C:\Users\Admin\Desktop\github\foe-all-in-on\Expedição\ESeta.PNG|%ERepetir%|%EIntervalo%|ImageSearch||Client|||8|
+9|If Image/Pixel Found||1|0|If_Statement|||||15|
+10|[Add Variable]|ESetaY += 90|1|0|Variable|||||17|
+11|Left Move & Click|%ESetaX%, %ESetaY% Left, 1|1|10|Click|||||18|
+12|[End If]|EndIf|1|0|If_Statement|||||20|
+13|Continue, Continue, EAtkX, EAtkY, 1|%InicioX%, %InicioY%, %FimX%, %FimY%, C:\Users\Admin\Desktop\github\foe-all-in-on\Expedição\EAtacar.PNG|%ERepetir%|%EIntervalo%|ImageSearch||Client|||21|
+14|If Image/Pixel Found||1|0|If_Statement|||||28|
+15|Left Move & Click|%EAtkX%, %EAtkY% Left, 1|1|10|Click|||||30|
+16|[End If]|EndIf|1|0|If_Statement|||||32|
+17|Continue, Continue, ETrocaTropaX, ETrocaTropaY|564, 327, 604, 370, 0x432815, 0, Fast RGB|%ERepetir%|%EIntervalo%|PixelSearch||Client|||33|
+18|If Image/Pixel Found||1|0|If_Statement|||||39|
+19|r|{r}|1|0|Send|||||41|
+20|[End If]|EndIf|1|0|If_Statement|||||42|
+21|Continue, Continue, EBatX, EBatY, 1|%InicioX%, %InicioY%, %FimX%, %FimY%, C:\Users\Admin\Desktop\github\foe-all-in-on\Expedição\EBatAuto.PNG|%ERepetir%|%EIntervalo%|ImageSearch||Client|||43|
+22|If Image/Pixel Found||1|0|If_Statement|||||50|
+23|b|{b}|1|0|Send|||||52|
+24|[End If]|EndIf|1|0|If_Statement|||||53|
+25|Continue, Continue, EOk1X, EOk1Y, 1|%InicioX%, %InicioY%, %FimX%, %FimY%, C:\Users\Admin\Desktop\github\foe-all-in-on\Expedição\EOk1.PNG|%ERepetir%|%EIntervalo%|ImageSearch||Client|||54|
+26|If Image/Pixel Found||1|0|If_Statement|||||61|
+27|Escape|{Escape}|1|0|Send|||||63|
+28|[End If]|EndIf|1|0|If_Statement|||||64|
+29|Continue, Continue, EContX, EContY, 1|%InicioX%, %InicioY%, %FimX%, %FimY%, C:\Users\Admin\Desktop\github\foe-all-in-on\Expedição\EContinuar.PNG|%ERepetir%|%EIntervalo%|ImageSearch||Client|||65|
+30|If Image/Pixel Found||1|0|If_Statement|||||72|
+31|Escape|{Escape}|1|0|Send|||||74|
+32|[End If]|EndIf|1|0|If_Statement|||||75|
+33|Continue, Continue, EOk2X, EOk2Y, 1|%InicioX%, %InicioY%, %FimX%, %FimY%, C:\Users\Admin\Desktop\github\foe-all-in-on\Expedição\EOk2.PNG|%ERepetir%|%EIntervalo%|ImageSearch||Client|||76|
+34|If Image/Pixel Found||1|0|If_Statement|||||83|
+35|Escape|{Escape}|1|0|Send|||||85|
+36|[End If]|EndIf|1|0|If_Statement|||||86|
+37|Continue, Continue, EJogarX, EJogarY, 1|%InicioX%, %InicioY%, %FimX%, %FimY%, C:\Users\Admin\Desktop\github\foe-all-in-on\Expedição\EJogar.PNG|%ERepetir%|%EIntervalo%|ImageSearch||Client|||87|
+38|If Image/Pixel Found||1|0|If_Statement|||||94|
+39|Left Move & Click|%EJogarX%, %EJogarY% Left, 1|1|10|Click|||||96|
+40|[End If]|EndIf|1|0|If_Statement|||||98|
+41|Continue, Continue, EStopX, EStopY, 1|%InicioX%, %InicioY%, %FimX%, %FimY%, C:\Users\Admin\Desktop\github\foe-all-in-on\Expedição\EStop.PNG|%ERepetir%|%EIntervalo%|ImageSearch||Client|||99|
+42|If Image/Pixel Found||1|0|If_Statement|||||106|
+43|Break||1|0|Break|||||108|
+44|[End If]|EndIf|1|0|If_Statement|||||109|
+
