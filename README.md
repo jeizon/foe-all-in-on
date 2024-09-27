@@ -3,6 +3,7 @@ Automatição FoE
 * Auxiliar quantidade definida de amigos (Missões rotativas)
 * Batalha Automatica na CbG
 * Batalha Automatica no JxJ
+* Batalha Automática na Expedição 
 
 24/07/2024
 - Comecei a ajustar o script pra funcionar no Chrome, com zoom em 100% (Antes estava em 80%), e usando o FoE como aplicativo do Google. 
@@ -11,6 +12,10 @@ Automatição FoE
 
 23/09/2024
 - Criado variáveis para a maioria das funcões
+
+27/09/2024
+- Adicionado opção para lutar todas tentativas automaticamente, se acabar o lvl e ainda houver tentativas, ele vai para o próximo level sozinho.
+Quando acabar as tentativas e aparecer pra comprar mais, ele para sozinho o script.
 
 * Como utilizar:
  - Abra o app do windows "Ferramentas de Captura" e tire um print igual ao que esta nas pastas e substitui a imagem em questão pela sua. Isso porque a imagem difere de acordo com sua resolução, navegador e fonte do computador.
